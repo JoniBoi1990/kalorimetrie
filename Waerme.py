@@ -99,7 +99,7 @@ if uploaded_file and st.button("Berechnung starten"):
 
     ax.set_xlabel('Zeit [s]')
     ax.set_ylabel('Temperatur [°C]')
-    ax.set_title('Kalorimetrische Messung mit Korrektur')
+    ax.set_title(ausgabe_name)
     ax.legend()
     plt.tight_layout()
 
