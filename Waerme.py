@@ -11,6 +11,7 @@ def muster_csv():
         "Temperatur_C": np.linspace(21.2, 25.2, 30),
         "Phase": ["Vorperiode"]*10 + ["Hauptperiode"]*5 + ["Nachperiode"]*15
     })
+
     return df.to_csv(index=False, sep=';', decimal='.')
 
 st.title("Kalorimetrie-Auswertung mit Wärmeaustauschkorrektur")
@@ -26,7 +27,9 @@ n_stoff = st.number_input("Stoffmenge (mol)", value=0.002, format="%.3f")
 ausgabe_name = st.text_input("Name für die Ausgabe (ohne Endung)", value="kalorimetrie_ergebnis")
 
 if uploaded_file and st.button("Berechnung starten"):
+
     df = pd.read_csv(uploaded_file, decimal='.', sep=';')
+
     st.write("Vorschau der Daten:")
     st.dataframe(df.head())
 
