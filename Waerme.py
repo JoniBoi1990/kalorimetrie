@@ -21,8 +21,8 @@ st.download_button("Muster-CSV herunterladen", muster_csv(), file_name="kalorime
 
 uploaded_file = st.file_uploader("CSV-Datei hochladen", type="csv")
 C_kal = st.number_input("Kalorimeterkapazität (J/K)", value=120.0)
-m_loesung = st.number_input("Masse Lösung (kg)", value=0.05)
-c_loesung = st.number_input("spez. Wärmekapazität (J/kg/K)", value=4180)
+m_loesung = st.number_input("Masse Lösung (g)", value=100.00)
+c_loesung = st.number_input("spez. Wärmekapazität (J/g/K)", value=4.183, format="%.3f")
 n_stoff = st.number_input("Stoffmenge (mol)", value=0.002, format="%.3f")
 ausgabe_name = st.text_input("Name für die Ausgabe (ohne Endung)", value="kalorimetrie_ergebnis")
 
