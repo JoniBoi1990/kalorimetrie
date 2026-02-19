@@ -274,7 +274,7 @@ if st.session_state.get("metrics") is not None:
     st.write(f"**ΔH:** {metrics['delta_H'] / 1000:.2f} kJ/mol")
 
 if st.session_state.get("plotbuf") is not None:
-    st.image(st.session_state["plotbuf"], caption="Kalorimetrie-Plot", use_container_width=True)
+    st.image(st.session_state["plotbuf"], caption="Kalorimetrie-Plot")
     st.download_button(
         "Plot als PNG herunterladen",
         st.session_state["plotbuf"],
